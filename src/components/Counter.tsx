@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-export default function Counter() {
-    const [count, setCount] = useState(0);
+ const Counter: React.FC = () => {
+    const [count, setCount] = useState<number>(0);
 
     let increase=() => setCount(count + 1);
     let decrease=() => setCount(count>0 ? count - 1 : 0);
@@ -14,3 +14,4 @@ export default function Counter() {
         </div>
     )
 }
+export default Counter;
